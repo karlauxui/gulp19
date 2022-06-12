@@ -143,11 +143,11 @@ nav a {
 .button {
     @include space(0, 0.5rem 1rem);
     display: inline-block;
-    background-color: $third-color;
-    border-radius: 10px;
-    color: $off-white;
-    text-decoration: none;
     border: 3px solid $third-color;
+    background-color: $third-color;
+    color: $off-white;
+    border-radius: 10px;
+    text-decoration: none;
 
     &:hover {
         background-color: $off-white;
@@ -158,8 +158,8 @@ nav a {
 //Nested Footer 
 footer {
     color: $off-white;
-    text-align: center;
     border-top: 10px solid $second-color;
+    text-align: center;
 
     ul {
         @include space(0, 0);
