@@ -1,0 +1,177 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    @include space(0, 0);
+    font-family: var(--main-font);
+    background-color: $bright-blue;
+    line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+}
+
+header {
+    border-bottom: 10px solid $second-color;
+}
+
+/* establishes a white background */
+.main-bkgd {
+    background: $white url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
+    padding-bottom: 300px;
+}
+
+.landing-bkgd {
+    @include space(0, 0);
+    width: 100%;
+    height: 100%;
+    background-image: url(../media/images/gulp-menu.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 5rem;
+}
+
+.par-box {
+    display: inline-block;
+    color: $fourth-color;
+    background-color: $off-white;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* sits inside of the white background, centered */
+.main {
+    @include space(0, 2rem);
+    @include flexcontainer (flex, space-between);
+    max-width: 1200px;
+    flex-flow: row wrap;
+}
+
+article {
+    flex-basis: 73%;
+}
+
+img {
+    border-radius: 10px;
+}
+
+picture {
+    margin: 3rem 0 0 0;
+    flex-basis: 25%;
+    padding-left: 3rem;
+}
+
+.contact-info {
+    @include space(0, 0);
+    text-align: center;
+    padding: 2rem 0 0 0;
+}
+
+/* navbar styling */
+nav ul {
+    @include space(0, 0);
+    @include flexcontainer(flex, space-between);
+    list-style-type: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 1.3rem;
+}
+
+// Nested a 
+a {
+    color: $fourth-color;
+    padding: .5rem;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Nested nav.logo class /* flex basis on the image container, li */
+nav .logo {
+    flex-basis: 100%;
+    text-align: center;
+
+    /* max width on the image in pixels */
+    img {
+        max-width: 150px;
+    }
+}
+
+// Nested nav a 
+nav a {
+    color: $white;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+        color: $second-color;
+    }
+}
+
+//Nested .products-card class
+.products-card {
+    @include space(0, 3rem 3rem 0 3rem);
+    @include flexcontainer (flex, left);
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+        border: solid .5rem $second-color;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+}
+
+//Nested .button class
+.button {
+    @include space(0, 0.5rem 1rem);
+    display: inline-block;
+    background-color: $third-color;
+    border-radius: 10px;
+    color: $off-white;
+    text-decoration: none;
+    border: 3px solid $third-color;
+
+    &:hover {
+        background-color: $off-white;
+        color: $third-color;
+    }
+}
+
+//Nested Footer 
+footer {
+    color: $off-white;
+    text-align: center;
+    border-top: 10px solid $second-color;
+
+    ul {
+        @include space(0, 0);
+        @include flexcontainer(flex, center);
+        list-style-type: none;
+        flex-flow: row wrap;
+    }
+
+    a {
+        color: $off-white;
+        font-size: 2rem;
+        display: block;
+        margin: 0 1rem 3rem 1rem;
+    }
+}

@@ -1,0 +1,10 @@
+//Mixins- declaring, calling and passing arguments.
+@mixin flexcontainer ($display, $justify-content) {
+    display: $display;
+    justify-content: $justify-content;
+}
+
+@mixin space ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}

@@ -1,0 +1,31 @@
+/* Media Query for Desktop */
+@media (min-width: 1200px) {
+    picture {
+        display: flex;
+    }
+
+    nav .logo img {
+        @include flexcontainer(flex, flex-start);
+        max-width: 150px;
+        margin-right: 5rem;
+    }
+
+    nav .logo {
+        flex-basis: 50%;
+    }
+
+    .main {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+    }
+
+    .container {
+        @include flexcontainer(flex, space-between);
+        flex-flow: row wrap;
+    }
+
+    .products-card {
+        flex-basis: 30%;
+    }
+}

@@ -1,3 +1,10 @@
+/* CSS variables*/
+:root {
+  --main-font: "Lato", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+
+/* Box Model */
 html {
   box-sizing: border-box;
 }
@@ -11,28 +18,76 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--main-font);
   background-color: #082B59;
-  font-family: "Lato", sans-serif;
   line-height: 2;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Poppins", sans-serif;
-}
-
-a {
-  color: #131D26;
-  padding: 0.5rem;
-}
-
-a:hover {
-  text-decoration: none;
+  font-family: var(--secondary-font);
 }
 
 header {
   border-bottom: 10px solid #d98555;
+}
+
+/* establishes a white background */
+.main-bkgd {
+  background: #ffffff url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
+  padding-bottom: 300px;
+}
+
+.landing-bkgd {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/images/gulp-menu.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  padding: 5rem;
+}
+
+.par-box {
+  display: inline-block;
+  color: #131D26;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* sits inside of the white background, centered */
+.main {
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  flex-flow: row wrap;
+}
+
+article {
+  flex-basis: 73%;
+}
+
+img {
+  border-radius: 10px;
+}
+
+picture {
+  margin: 3rem 0 0 0;
+  flex-basis: 25%;
+  padding-left: 3rem;
+}
+
+.contact-info {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding: 2rem 0 0 0;
 }
 
 /* navbar styling */
@@ -51,15 +106,21 @@ nav li {
   font-size: 1.3rem;
 }
 
-/* max width on the image in pixels */
-nav .logo img {
-  max-width: 150px;
+a {
+  color: #131D26;
+  padding: 0.5rem;
+}
+a:hover {
+  text-decoration: none;
 }
 
-/* flex basis on the image container, li */
 nav .logo {
   flex-basis: 100%;
   text-align: center;
+  /* max width on the image in pixels */
+}
+nav .logo img {
+  max-width: 150px;
 }
 
 nav a {
@@ -67,56 +128,8 @@ nav a {
   text-decoration: none;
   display: block;
 }
-
 nav a:hover {
   color: #d98555;
-}
-
-/* establishes a white background */
-.main-bkgd {
-  background: #ffffff url(../media/images/gulp-bottom-beans.jpg) repeat-x bottom;
-  padding-bottom: 300px;
-}
-
-.par-box {
-  display: inline-block;
-  color: #131D26;
-  background-color: #f2f2f2;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.landing-bkgd {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../media/images/gulp-menu.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  padding: 5rem;
-}
-
-/* sits inside of the white background, centered */
-.main {
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  flex-flow: row wrap;
-}
-
-article {
-  flex-basis: 73%;
-}
-
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-content: center;
 }
 
 .products-card {
@@ -127,22 +140,11 @@ article {
   align-items: center;
   flex-wrap: wrap;
 }
-
 .products-card img {
   border: solid 0.5rem #D98555;
   width: 100%;
   height: auto;
   align-items: center;
-}
-
-img {
-  border-radius: 10px;
-}
-
-picture {
-  margin: 3rem 0 0 0;
-  flex-basis: 25%;
-  padding-left: 3rem;
 }
 
 .button {
@@ -155,17 +157,9 @@ picture {
   text-decoration: none;
   border: 3px solid #59331d;
 }
-
 .button:hover {
   background-color: #f2f2f2;
   color: #59331d;
-}
-
-.contact-info {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  padding: 2rem 0 0 0;
 }
 
 footer {
@@ -173,7 +167,6 @@ footer {
   text-align: center;
   border-top: 10px solid #d98555;
 }
-
 footer ul {
   margin: 0;
   padding: 0;
@@ -182,7 +175,6 @@ footer ul {
   list-style-type: none;
   flex-flow: row wrap;
 }
-
 footer a {
   color: #f2f2f2;
   font-size: 2rem;
@@ -190,6 +182,7 @@ footer a {
   margin: 0 1rem 3rem 1rem;
 }
 
+/* Media Queries for Mobile and Tablet */
 @media (min-width: 1200px) {
   picture {
     display: flex;

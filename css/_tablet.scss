@@ -1,0 +1,23 @@
+/* Media Query for Tablet */
+@media (min-width: 992px) {
+    picture {
+        @include flexcontainer(flex, flex-end);
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .main {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+    }
+
+    .products-card img {
+        width: 75%;
+        height: auto;
+        align-items: center;
+    }
+}
